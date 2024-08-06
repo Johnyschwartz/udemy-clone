@@ -16,7 +16,23 @@ body {
   top: 30%;
   left: 10%;
   padding: 20px;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: zoom;
+  animation-fill-mode: forwards;
 }
+
+@keyframes zoom{
+  0%{
+     opacity: 0;
+     transform: scale(0);
+  }
+  100%{
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
 .navbar {
   padding: 10px;
   display: flex;
@@ -85,9 +101,18 @@ body {
   color: white;
   border-radius: 30px;
   padding: 15px;
+  border: solid #af4ef2 2px;
+}
+.categories p:hover{
+  background-color:transparent;
+  color: black;
+  border: solid #af4ef2 2px;
+  transition: 1s;
+
 }
 .sale-image img {
   width: 100%;
+
 }
 .recomended {
   padding: 10px;
